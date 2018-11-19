@@ -103,7 +103,7 @@
         let self = this;
         let options = {
                   method:'get',
-                  url:'http://localhost:3000/articles',
+                  url:'http://35.197.172.114:3001/articles',
               };
         axios(options)
         .then(articles => {
@@ -125,7 +125,7 @@
         let self=this;
         let token= localStorage.getItem('token');
         let options={
-          url:`http://localhost:3000/articles`,
+          url:`http://35.197.172.114:3001/articles`,
           method:'post',
           headers: {'token': token },
           data: article
@@ -146,7 +146,7 @@
         let self=this;
         let token= localStorage.getItem('token');
         let options={
-          url:`http://localhost:3000/articles/${articleId}`,
+          url:`http://35.197.172.114:3001/articles/${articleId}`,
           method:'delete',
           headers: {'token': token } 
         }
@@ -162,7 +162,7 @@
       },
       viewArticle(articleId) {
         let options={
-        url:`http://localhost:3000/articles/${articleId}`,
+        url:`http://35.197.172.114:3001/articles/${articleId}`,
         method:'get',
         }
         axios(options)
@@ -178,7 +178,7 @@
       },
       handleReg(newUser) {
         let options={
-          url:'http://localhost:3000/users/register',
+          url:'http://35.197.172.114:3001/users/register',
           method:'post',
           data: newUser
         }
@@ -196,7 +196,7 @@
       },
       handleLogin(userLogin) {
         let options={
-          url:'http://localhost:3000/users/login',
+          url:'http://35.197.172.114:3001/users/login',
           method:'post',
           data: userLogin
         }

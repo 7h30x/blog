@@ -65,7 +65,7 @@
         let articleId=this.currentArticle._id;
         let options = {
                 method:'delete',
-                url:`http://localhost:3000/comments/${commentId}`,
+                url:`http://35.197.172.114:3001/comments/${commentId}`,
                 headers:{token : localStorage.getItem('token')},
                 data: {
                   articleId: articleId,
@@ -84,7 +84,7 @@
         let articleId=this.currentArticle._id;
         let options = {
                 method:'post',
-                url:'http://localhost:3000/comments',
+                url:'http://35.197.172.114:3001/comments',
                 headers:{token : localStorage.getItem('token')},
                 data: {
                   comment: this.txtinput,
